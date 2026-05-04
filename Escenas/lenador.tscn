@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bhc4uo1voanph"]
+
+[ext_resource type="Texture2D" uid="uid://4kaaxlnmpjf5" path="res://Imagenes/leñador.png" id="1_iwr71"]
+[ext_resource type="Script" uid="uid://c0fl4px81fgx7" path="res://Scripts/lenador.gd" id="1_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lenador"]
+size = Vector2(128.57144, 242.85716)
+
+[sub_resource type="Animation" id="Animation_0hrqr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(22.39, 7.314003, 133, 217.5)]
+}
+
+[sub_resource type="Animation" id="Animation_68u1k"]
+resource_name = "caminar_abajo"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(22.39, 7.314003, 133, 217.5), Rect2(196.12, 11.565392, 135.87445, 209.59412)]
+}
+
+[sub_resource type="Animation" id="Animation_thu6k"]
+resource_name = "caminar_arriba"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(26.699997, 253.614, 128, 224.50002), Rect2(193.92, 254.622, 139.49998, 221.50002)]
+}
+
+[sub_resource type="Animation" id="Animation_4ya2d"]
+resource_name = "caminar_derecha"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(1248.7339, 5.7028375, 143.51526, 218.62651), Rect2(1063.9229, 8.363556, 142.00635, 219.07513)]
+}
+
+[sub_resource type="Animation" id="Animation_rtev8"]
+resource_name = "caminar_izquierda"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Rect2(27.272934, 533.1807, 143.43355, 234.77435)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_thu6k"]
+_data = {
+&"RESET": SubResource("Animation_0hrqr"),
+&"caminar_abajo": SubResource("Animation_68u1k"),
+&"caminar_arriba": SubResource("Animation_thu6k"),
+&"caminar_derecha": SubResource("Animation_4ya2d"),
+&"caminar_izquierda": SubResource("Animation_rtev8")
+}
+
+[node name="Lenador" type="CharacterBody2D" unique_id=1266500270 groups=["enemigo", "lenadores"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=808013925]
+y_sort_enabled = true
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_iwr71")
+region_enabled = true
+region_rect = Rect2(22.39, 7.314003, 133, 217.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045690486]
+position = Vector2(-1, 2.9999995)
+scale = Vector2(0.55, 0.55)
+shape = SubResource("RectangleShape2D_lenador")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=351724461]
+libraries/ = SubResource("AnimationLibrary_thu6k")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1360473474]
+avoidance_enabled = true

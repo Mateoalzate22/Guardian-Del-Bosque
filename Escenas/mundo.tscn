@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://ban1c4fvro4xb"]
+
+[ext_resource type="Texture2D" uid="uid://dxc63t5my04n4" path="res://Imagenes/mundo.png" id="1_bqhdr"]
+[ext_resource type="Script" uid="uid://3s7sqybfq08y" path="res://Scripts/mundo.gd" id="1_mundo"]
+[ext_resource type="PackedScene" uid="uid://bbswmphhv6kpo" path="res://Escenas/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://bhc4uo1voanph" path="res://Escenas/lenador.tscn" id="4_ly0wt"]
+[ext_resource type="PackedScene" uid="uid://ex44kwh6pbgs" path="res://Escenas/semilla.tscn" id="5_rxj15"]
+[ext_resource type="PackedScene" uid="uid://lop6s4flcxiv" path="res://Escenas/arbol_madre.tscn" id="6_f4s1m"]
+[ext_resource type="Texture2D" uid="uid://b3fok5ebmaynb" path="res://Imagenes/arbol.png" id="7_arbol"]
+[ext_resource type="PackedScene" path="res://Escenas/efecto_hojas_viento.tscn" id="8_amb"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ly0wt"]
+vertices = PackedVector2Array(705.78125, 499.92188, 725.6875, 519.8281, 750.9531, 589.60156, 735.10156, 592.7969, 666.1719, 591.34375, 650.9297, 587.3203, 1045.7031, 350.82813, 1392.9688, 14.0078125, 1391.0234, 750.02344, 1062.6484, 419.9922, 1058.7031, 404.9297, 1038.5625, 360.8125, 672, 124.64844, 672, 107.24219, 743.75, 89.4375, 746.2422, 176.50781, 674.8203, 253.0625, 667.5781, 198.3125, 668.97656, 147.78125, 749.28125, 251.07813, 725.96094, 276.52344, 685.9375, 284.85156, 1001.2422, 355.14844, 932.78125, 406.0703, 972.39844, 360.92188, 953.3828, 362.5, 847.9375, 394.21094, 1016.71094, 295.0078, 1012.60156, 261.10938, 750.2578, 299.39063, 649.78125, 310.15625, 649.77344, 310.14844, 663.8203, 701.6328, 733.9219, 691.6094, 849.0625, 353.89844, 947.1172, 351.1797, 989.78125, 231.07813, 929.6094, 422.03125, 961.71875, 435.64844, 957.65625, 448.53125, 820.52344, 462.77344, 834.1797, 425.97656, 664.9297, 87.796875, 650.5, 88.21094, 641.9297, 116.72656, 617.27344, 112.75, 766.3281, 179.85156, 766.3281, 179.85938, 1030.9375, 437.4922, 1015.22656, 520.0078, 939.64844, 592.46875, 586.4219, 679.9219, 639.7031, 681.75, 647.1719, 704.14844, 13.9765625, 753.96875, 802.5, 614, 761.5625, 614, 785.46094, 494.54688, 874.3125, 575.7031, 832.89844, 319.42188, 958.1797, 336.4297, 962.7969, 472.1797, 960.46875, 485.40625, 940.27344, 518.46094, 827.14844, 125.421875, 768.96094, 114.328125, 761.2422, 86.78125, 948.8672, 221.5625, 938.60156, 187.92969, 642.90625, 602.21094, 595.1797, 603.8828, 538.47656, 561.3594, 845.14844, 670.53906, 474.84375, 361.25, 461.10156, 312.5703, 482.72656, 288.35938, 563.7422, 315.42188, 550.3828, 378.8828, 904.1875, 162.39844, 668, 506.1328, 909.4531, 244.67188, 939.9922, 279.03125, 964.4219, 317.03906, 961.02344, 334.71875, 822.3828, 300.72656, 823.3203, 189.52344, 388, 300.29688, 388, 322.10938, 358.9297, 344.71875, 808.7031, 292.7422, 786.8594, 274.8828, 663.6875, 249.35156, 614.7031, 174.38281, 557.4922, 200.70313, 591.75, 178.47656, 598.02344, 275.6172, 510.64063, 251.46094, 626.46094, 326.67188, 767.6797, 314.7578, 657.3906, 462.22656, 635.6406, 441.4297, 620.3828, 397.52344, 608.7969, 344.32813, 358.1875, 425.90625, 376.96094, 438.0625, 386.3828, 487.9375, 602.02344, 464.46094, 608.21875, 479.9922, 492.84375, 517.71094, 457.6797, 485.3203, 454.27344, 438.46875, 477.77344, 411.85156, 577.35156, 422.03125, 421.72656, 353.0703, 577.35156, 422.02344, 412.6172, 397.6797, 364.4922, 358.6875, 13.0078125, 15.9765625, 552.8125, 132.82813, 476.39844, 180.32813, 434.6328, 229.40625, 604.60156, 357.6172, 789.9219, 331.4375, 808.64844, 373.35156, 803.5781, 404.6172, 782.34375, 429.39063, 738.39844, 458.04688, 707.35156, 470, 668, 475.4922, 624.65625, 501.4922, 360.02344, 413.22656, 746.3203, 696.8281, 761.65625, 681.46875, 413.6328, 270.39063, 409.77344, 542.15625, 500.42188, 617.53125, 548.28906, 660.3125)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 6, 10), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 12, 15, 19, 20, 21), PackedInt32Array(22, 11, 10, 23, 24), PackedInt32Array(25, 24, 23, 26), PackedInt32Array(7, 6, 27, 28), PackedInt32Array(29, 30, 31, 21, 20), PackedInt32Array(32, 4, 3, 33), PackedInt32Array(26, 34, 35, 25), PackedInt32Array(7, 28, 36), PackedInt32Array(37, 38, 39, 40, 41, 26), PackedInt32Array(26, 23, 37), PackedInt32Array(14, 13, 42), PackedInt32Array(43, 44, 45), PackedInt32Array(15, 46, 47, 19), PackedInt32Array(48, 9, 8, 49), PackedInt32Array(50, 49, 8), PackedInt32Array(51, 52, 53, 54), PackedInt32Array(55, 56, 2, 1, 57, 58), PackedInt32Array(35, 34, 59, 60), PackedInt32Array(40, 39, 61, 62, 63, 58, 57), PackedInt32Array(64, 65, 66, 7), PackedInt32Array(36, 67, 68, 7), PackedInt32Array(5, 69, 70, 71), PackedInt32Array(72, 50, 8), PackedInt32Array(73, 74, 75, 76, 77), PackedInt32Array(7, 68, 78), PackedInt32Array(0, 5, 71, 79), PackedInt32Array(80, 81, 82, 83, 60, 59, 84, 85), PackedInt32Array(86, 87, 88), PackedInt32Array(85, 84, 89, 90, 47), PackedInt32Array(47, 90, 19), PackedInt32Array(17, 16, 91, 92), PackedInt32Array(93, 94, 92, 91, 95, 96), PackedInt32Array(96, 95, 76, 75), PackedInt32Array(97, 30, 29, 98, 99, 100, 101, 102), PackedInt32Array(103, 104, 105, 54), PackedInt32Array(106, 107, 108, 109, 110, 111, 112), PackedInt32Array(113, 73, 77, 114, 112, 111, 115, 116), PackedInt32Array(7, 78, 64), PackedInt32Array(117, 7, 66), PackedInt32Array(117, 66, 14, 42), PackedInt32Array(117, 42, 43), PackedInt32Array(117, 43, 45, 118), PackedInt32Array(117, 118, 119), PackedInt32Array(117, 119, 120), PackedInt32Array(54, 117, 120, 86), PackedInt32Array(101, 121, 102), PackedInt32Array(99, 98, 122, 123, 124, 125, 126, 127, 128), PackedInt32Array(128, 127, 0, 79), PackedInt32Array(129, 79, 71), PackedInt32Array(107, 129, 71, 108), PackedInt32Array(116, 115, 130), PackedInt32Array(131, 132, 72, 8), PackedInt32Array(32, 33, 131, 53), PackedInt32Array(54, 88, 116, 130, 103), PackedInt32Array(131, 8, 54, 53), PackedInt32Array(120, 133, 86), PackedInt32Array(54, 86, 88), PackedInt32Array(54, 105, 134), PackedInt32Array(54, 134, 135, 136), PackedInt32Array(54, 136, 51)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(3, 6, 1403, 4, 1401, 760, 4, 764)])
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_go_card"]
+bg_color = Color(0.08, 0.34, 0.2, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.93, 0.78, 0.34, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.02, 0.1, 0.05, 0.5)
+shadow_size = 8
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_go_btn_n"]
+bg_color = Color(0.86, 0.69, 0.24, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45, 0.32, 0.1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_go_btn_p"]
+bg_color = Color(0.7, 0.53, 0.18, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38, 0.26, 0.08, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_go_btn_h"]
+bg_color = Color(0.96, 0.84, 0.4, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.52, 0.38, 0.12, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqhdr"]
+size = Vector2(1416, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ly0wt"]
+size = Vector2(1411, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxj15"]
+size = Vector2(11, 778)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4s1m"]
+size = Vector2(4, 777)
+
+[node name="Mundo" type="Node2D" unique_id=827023810]
+y_sort_enabled = true
+script = ExtResource("1_mundo")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1780071120]
+navigation_polygon = SubResource("NavigationPolygon_ly0wt")
+
+[node name="TextureRect" type="TextureRect" parent="NavigationRegion2D" unique_id=1898335919]
+offset_right = 1408.0
+offset_bottom = 768.0
+texture = ExtResource("1_bqhdr")
+
+[node name="LimitesMapa" type="StaticBody2D" parent="NavigationRegion2D" unique_id=336732754]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/LimitesMapa" unique_id=1766077675]
+polygon = PackedVector2Array(396, 344, 422, 343, 448, 346, 450, 310, 475, 282, 503, 245, 551, 193, 588, 169, 616, 164, 654, 173, 659, 147, 653, 121, 639, 124, 618, 123, 557, 142, 483, 188, 443, 235, 422, 276, 398, 304, 398, 327)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="NavigationRegion2D/LimitesMapa" unique_id=206826996]
+position = Vector2(287, 25)
+polygon = PackedVector2Array(477, 140, 501, 150, 540, 155, 629, 212, 661, 248, 688, 290, 681, 323, 714, 320, 734, 319, 720, 273, 716, 240, 697, 215, 654, 205, 643, 169, 612, 146, 537, 110, 477, 96)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="NavigationRegion2D/LimitesMapa" unique_id=1678430076]
+position = Vector2(117, 168)
+polygon = PackedVector2Array(547, 92, 487, 116, 456, 152, 444, 209, 469, 249, 494, 292, 500, 307, 513, 324, 541, 327, 541, 311, 533, 301, 510, 279, 494, 233, 477, 190, 483, 171, 503, 151, 527, 134, 542, 109, 550, 93)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="NavigationRegion2D/LimitesMapa" unique_id=422657610]
+position = Vector2(117, 168)
+polygon = PackedVector2Array(644, 118, 654, 125, 671, 136, 689, 157, 702, 204, 696, 241, 672, 269, 626, 299, 600, 309, 599, 328, 611, 340, 663, 318, 695, 289, 708, 254, 721, 224, 722, 188, 707, 156, 698, 140, 686, 133, 664, 115, 640, 97)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="NavigationRegion2D/LimitesMapa" unique_id=647978588]
+position = Vector2(117, 168)
+polygon = PackedVector2Array(846, 254, 851, 281, 856, 304, 853, 321, 831, 357, 763, 416, 688, 456, 632, 449, 632, 508, 670, 497, 724, 493, 816, 417, 884, 345, 897, 291, 910, 253)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="NavigationRegion2D/LimitesMapa" unique_id=1919667729]
+position = Vector2(117, 168)
+polygon = PackedVector2Array(533, 445, 475, 446, 415, 401, 369, 357, 331, 322, 327, 267, 335, 251, 299, 247, 252, 253, 269, 264, 279, 317, 301, 368, 390, 442, 437, 484, 472, 502, 535, 506)
+
+[node name="Player" parent="." unique_id=998154282 instance=ExtResource("2_player")]
+position = Vector2(684, 347)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=820352618]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1408
+limit_bottom = 768
+
+[node name="Lenador" parent="." unique_id=1266500270 instance=ExtResource("4_ly0wt")]
+position = Vector2(47, 93)
+
+[node name="arbol_madre" parent="." unique_id=341644119 instance=ExtResource("6_f4s1m")]
+position = Vector2(709.99994, 346.99997)
+scale = Vector2(0.4, 0.4)
+
+[node name="semilla" parent="." unique_id=1870666353 instance=ExtResource("5_rxj15")]
+
+[node name="AmbienteHojas" parent="." unique_id=239295467 instance=ExtResource("8_amb")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1354541692]
+layer = 2
+
+[node name="ContenedorJugador" type="Control" parent="CanvasLayer" unique_id=209770273]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/ContenedorJugador" unique_id=1583284831]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 300.0
+offset_bottom = 62.0
+metadata/_edit_use_anchors_ = true
+
+[node name="FondoSemilla" type="ColorRect" parent="CanvasLayer/ContenedorJugador" unique_id=1672050114]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 70.0
+offset_right = 150.0
+offset_bottom = 110.0
+color = Color(0, 0, 0, 0.5)
+
+[node name="IconoSemilla" type="Sprite2D" parent="CanvasLayer/ContenedorJugador/FondoSemilla" unique_id=1010810409]
+position = Vector2(25, 20)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_arbol")
+region_enabled = true
+region_rect = Rect2(110.649475, 411.91028, 261.74506, 170.77264)
+
+[node name="ContadorSemillas" type="Label" parent="CanvasLayer/ContenedorJugador" unique_id=1214850893]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 75.0
+offset_right = 140.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="ContenedorArbol" type="Control" parent="CanvasLayer" unique_id=1563420390]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/ContenedorArbol" unique_id=1463065833]
+layout_mode = 0
+offset_left = -300.0
+offset_top = 8.0
+offset_right = -32.0
+offset_bottom = 31.0
+text = "Salud Árbol Divino"
+horizontal_alignment = 1
+
+[node name="VidaArbolUI" type="ProgressBar" parent="CanvasLayer/ContenedorArbol" unique_id=1067040711]
+layout_mode = 0
+offset_left = -300.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = 62.0
+
+[node name="GameOverPanel" type="Panel" parent="CanvasLayer" unique_id=1068396220]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Overlay" type="ColorRect" parent="CanvasLayer/GameOverPanel" unique_id=355228064]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.03, 0.22, 0.12, 0.78)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/GameOverPanel" unique_id=1532970210]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="Panel" parent="CanvasLayer/GameOverPanel/CenterContainer" unique_id=2069200164]
+custom_minimum_size = Vector2(980, 420)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBox_go_card")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/GameOverPanel/CenterContainer/Card" unique_id=1952648438]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+theme_override_constants/separation = 22
+alignment = 1
+
+[node name="TituloGameOver" type="Label" parent="CanvasLayer/GameOverPanel/CenterContainer/Card/VBoxContainer" unique_id=468620785]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.82, 0.36, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.2, 0.1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 52
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Mensaje" type="Label" parent="CanvasLayer/GameOverPanel/CenterContainer/Card/VBoxContainer" unique_id=1978091423]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.95, 0.76, 1)
+theme_override_font_sizes/font_size = 22
+text = "El bosque te necesita otra vez..."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonReintentar" type="Button" parent="CanvasLayer/GameOverPanel/CenterContainer/Card/VBoxContainer" unique_id=2116102867]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.16, 0.1, 0.03, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBox_go_btn_n")
+theme_override_styles/pressed = SubResource("StyleBox_go_btn_p")
+theme_override_styles/hover = SubResource("StyleBox_go_btn_h")
+text = "Volver a jugar"
+
+[node name="MusicaJuego" type="AudioStreamPlayer" parent="." unique_id=1284409972]
+
+[node name="LimitesFisicosMapa" type="StaticBody2D" parent="." unique_id=270625268]
+
+[node name="Muro_arriba" type="CollisionShape2D" parent="LimitesFisicosMapa" unique_id=1096596574]
+position = Vector2(700, -4.5)
+shape = SubResource("RectangleShape2D_bqhdr")
+
+[node name="Muro_abajo" type="CollisionShape2D" parent="LimitesFisicosMapa" unique_id=586110655]
+position = Vector2(702.5, 772.5)
+shape = SubResource("RectangleShape2D_ly0wt")
+
+[node name="Muro_derecha" type="CollisionShape2D" parent="LimitesFisicosMapa" unique_id=215195963]
+position = Vector2(1412.5, 379)
+shape = SubResource("RectangleShape2D_rxj15")
+
+[node name="Muro_izquierda" type="CollisionShape2D" parent="LimitesFisicosMapa" unique_id=1486131623]
+position = Vector2(-1, 378.5)
+shape = SubResource("RectangleShape2D_f4s1m")
+
+[connection signal="pressed" from="CanvasLayer/GameOverPanel/CenterContainer/Card/VBoxContainer/BotonReintentar" to="." method="_on_boton_reintentar_pressed"]

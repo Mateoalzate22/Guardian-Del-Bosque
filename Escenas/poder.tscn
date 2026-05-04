@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://g13loadycmkt"]
+
+[ext_resource type="Script" uid="uid://dlq4x2rt4veru" path="res://Scripts/poder.gd" id="1_qe1wn"]
+[ext_resource type="Texture2D" uid="uid://bjfqanenubkep" path="res://Imagenes/bolafuego.png" id="2_qe1wn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyn44"]
+size = Vector2(41, 35)
+
+[node name="Poder" type="Area2D" unique_id=2131191013]
+position = Vector2(22, 25)
+script = ExtResource("1_qe1wn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=24385587]
+position = Vector2(0, -3.981748)
+scale = Vector2(0.05, 0.044)
+texture = ExtResource("2_qe1wn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=135277024]
+position = Vector2(1.5, -3.5)
+shape = SubResource("RectangleShape2D_wyn44")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=299887582]
+position = Vector2(2, -4)
+rect = Rect2(-10, -13, 20, 23)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

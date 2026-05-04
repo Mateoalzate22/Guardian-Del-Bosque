@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cvbu70oe2jple"]
+
+[ext_resource type="Script" uid="uid://cjexjieysmufc" path="res://Scripts/arbol_plantable.gd" id="1_d4t46"]
+[ext_resource type="Texture2D" uid="uid://b3fok5ebmaynb" path="res://Imagenes/arbol.png" id="1_vbvoc"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=305641150]
+script = ExtResource("1_d4t46")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1119868593]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_vbvoc")
+region_enabled = true
+region_rect = Rect2(830.44824, 27.272797, 533.06604, 616.05835)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=460462505]
+
+[node name="CrecimientoTimer" type="Timer" parent="." unique_id=1188282492]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="CrecimientoTimer" to="." method="_on_crecimiento_timer_timeout"]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://lop6s4flcxiv"]
+
+[ext_resource type="Script" uid="uid://ynpeq0e31r6a" path="res://Scripts/arbol_madre.gd" id="1_e7vux"]
+[ext_resource type="Texture2D" uid="uid://6x7o0g5r8n5e" path="res://Imagenes/arbolprincipal.png" id="1_omkgb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omkgb"]
+size = Vector2(48, 196)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7vux"]
+size = Vector2(133, 225)
+
+[node name="arbol_madre" type="StaticBody2D" unique_id=341644119 groups=["arbol_divino"]]
+y_sort_enabled = true
+script = ExtResource("1_e7vux")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1507337097]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_omkgb")
+region_enabled = true
+region_rect = Rect2(139.37762, 27, 1107.6282, 530.14685)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=978560013]
+position = Vector2(0, 50)
+shape = SubResource("RectangleShape2D_omkgb")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1555503376]
+offset_right = 4.0
+offset_bottom = 27.0
+max_value = 500.0
+value = 500.0
+
+[node name="ZonaDeteccion" type="Area2D" parent="." unique_id=459121348]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaDeteccion" unique_id=1674779088]
+position = Vector2(-1.5, 50.5)
+shape = SubResource("RectangleShape2D_e7vux")
+
+[connection signal="body_entered" from="ZonaDeteccion" to="." method="_on_zona_deteccion_body_entered"]
+[connection signal="body_exited" from="ZonaDeteccion" to="." method="_on_zona_deteccion_body_exited"]

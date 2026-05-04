@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bbswmphhv6kpo"]
+
+[ext_resource type="Script" uid="uid://dwkdm11ogj34l" path="res://player.gd" id="1_i8vih"]
+[ext_resource type="Texture2D" uid="uid://c454yb0mk1ypn" path="res://Imagenes/guardian.png" id="2_texture"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnkc8"]
+size = Vector2(35.7143, 100.00004)
+
+[sub_resource type="Animation" id="Animation_cnkc8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(177.49973, 457.33963, 110.90567, 153.73056)]
+}
+
+[sub_resource type="Animation" id="Animation_cgfde"]
+resource_name = "caminar_abajo"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(24.16597, 18.68694, 112.99147, 137.92838), Rect2(26.012112, 169.67624, 112.96878, 136.62717)]
+}
+
+[sub_resource type="Animation" id="Animation_6njrx"]
+resource_name = "caminar_arriba"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(183.4126, 311.14154, 110.22653, 145.7323), Rect2(350.23074, 313.26068, 94.04208, 141.95032)]
+}
+
+[sub_resource type="Animation" id="Animation_i8vih"]
+resource_name = "caminar_derecha"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(177.49973, 457.33963, 110.90567, 153.73056), Rect2(37.11145, 464.4489, 111.672745, 142.92065)]
+}
+
+[sub_resource type="Animation" id="Animation_qgqwx"]
+resource_name = "caminar_izquierda"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(490.86194, 465.02045, 121.08539, 143.68903), Rect2(202.75453, 614.51355, 91.407364, 136.03564)]
+}
+
+[sub_resource type="Animation" id="Animation_xlwfv"]
+resource_name = "curarse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(1214.7842, 409.98422, 143.59473, 141.02396), Rect2(1237.415, 17.956314, 106.46277, 133.48164)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6njrx"]
+_data = {
+&"RESET": SubResource("Animation_cnkc8"),
+&"caminar_abajo": SubResource("Animation_cgfde"),
+&"caminar_arriba": SubResource("Animation_6njrx"),
+&"caminar_derecha": SubResource("Animation_i8vih"),
+&"caminar_izquierda": SubResource("Animation_qgqwx"),
+&"curarse": SubResource("Animation_xlwfv")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=998154282]
+y_sort_enabled = true
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_i8vih")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=438183476]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_texture")
+region_enabled = true
+region_rect = Rect2(177.49973, 457.33963, 110.90567, 153.73056)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1769219751]
+position = Vector2(3.214285, 0.7142845)
+scale = Vector2(0.49999976, 0.49999976)
+shape = SubResource("RectangleShape2D_cnkc8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=801038033]
+libraries/ = SubResource("AnimationLibrary_6njrx")
