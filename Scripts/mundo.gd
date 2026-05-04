@@ -158,3 +158,8 @@ func _on_boton_reintentar_pressed():
 func _configurar_pivotes_ui():
 	if game_over_card:
 		game_over_card.pivot_offset = game_over_card.size * 0.5
+
+
+func _on_musica_juego_finished() -> void:
+	$MusicaJuego.play()
+	pass # Replace with function body.

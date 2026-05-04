@@ -289,3 +289,4 @@ position = Vector2(-1, 378.5)
 shape = SubResource("RectangleShape2D_f4s1m")
 
 [connection signal="pressed" from="CanvasLayer/GameOverPanel/CenterContainer/Card/VBoxContainer/BotonReintentar" to="." method="_on_boton_reintentar_pressed"]
+[connection signal="finished" from="MusicaJuego" to="." method="_on_musica_juego_finished"]
