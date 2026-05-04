@@ -268,6 +268,7 @@ text = "Volver a jugar"
 
 [node name="MusicaJuego" type="AudioStreamPlayer" parent="." unique_id=1284409972]
 stream = ExtResource("9_awk8m")
+autoplay = true
 
 [node name="LimitesFisicosMapa" type="StaticBody2D" parent="." unique_id=270625268]
 

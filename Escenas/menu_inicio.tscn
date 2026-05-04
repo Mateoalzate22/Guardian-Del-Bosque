@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwk2ifdm6y3us" path="res://Scripts/menu_inicio.gd" id="1_menu"]
 [ext_resource type="PackedScene" path="res://Escenas/efecto_hojas_viento.tscn" id="2_amb"]
+[ext_resource type="AudioStream" uid="uid://vuw2ajwr13nu" path="res://audio/musica.wav" id="3_0wy8d"]
 
 [sub_resource type="StyleBoxFlat" id="panel_card"]
 bg_color = Color(0.1, 0.38, 0.24, 0.94)
@@ -176,5 +177,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="MusicaMenu" type="AudioStreamPlayer" parent="." unique_id=195874144]
+stream = ExtResource("3_0wy8d")
+autoplay = true
 
 [connection signal="pressed" from="MargenPrincipal/Tarjeta/VBoxContainer/BotonIniciar" to="." method="_on_boton_iniciar_pressed"]
